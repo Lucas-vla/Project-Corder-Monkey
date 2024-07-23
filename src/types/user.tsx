@@ -1,0 +1,26 @@
+import { Timestamp } from "firebase/firestore";
+
+export interface UserInterface {
+  uid: string;
+  email: string | null;
+  displayName: string | null;
+  emailVerified: boolean;
+  phoneNumber: string | null;
+  photoURL: string | null;
+  userDocument?: UserDocument;
+}
+
+export interface UserDocument {
+  uid: string;
+  email: string;
+  how_did_hear: string;
+  creation_Date: Timestamp;
+  onBoardingIsCompleted: boolean;
+  displayName: string;
+  expertise: string;
+  biography: string;
+  photoURL: string | null;
+
+
+  // ...
+}

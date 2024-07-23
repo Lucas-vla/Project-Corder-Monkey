@@ -2,3 +2,26 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+@layer base {
+    html {
+        font-family: inter, system-ui, sans-serif
+    }
+}
+    /* le hover permet que au survol de l'element, il applique le changement de couleur (pour l'exemple ci-dessous)
+     et le @ permet de recuperer les classes que l'on a créer nous même (text-primary)
+      car on est dans un Doc global css et que (primary) n'existe pas sans l'utilisation du @ */
+a:hover {
+    @apply text-primary 
+}
+
+/* Ici on va appliquer un micro delai au survol des liens / bouttons pour fluidifier les transitions de couleurs en l'occurence pour que cela ai un meilleur rendu visuel et moins "Direct" */
+.animate, a, a:hover {
+    transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    
+}
