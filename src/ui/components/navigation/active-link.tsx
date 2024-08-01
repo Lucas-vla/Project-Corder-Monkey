@@ -4,21 +4,20 @@ import { useRouter } from "next/router";
 import { useMemo } from "react";
 
 interface Props {
-    href:"";
-    children: React.ReactNode;
+  href: string;
+  children: React.ReactNode;
 }
 
-export const ActiveLink = ({href, children}: Props) => {
-    const router = useRouter()
+export const ActiveLink = ({ href, children }: Props) => {
+  const router = useRouter();
 
-    const isActive: boolean = useMemo(() => {
-        return router.pathname === href
-    }, [router.pathname, href])
+  const isActive: boolean = useMemo(() => {
+    return router.pathname === href;
+  }, [router.pathname, href]);
 
-
-    return (
-        <Link href={href} className={clsx(isActive && "text-primary font-bold")}>
-            {children}
-        </Link>
-    )
-}
+  return (
+    <Link href={href} className={clsx(isActive && "text-primary font-bold")}>
+      {children}
+    </Link>
+  );
+};
