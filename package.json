@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build && firebase deploy",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "postinstall": "npm install firebase -g"
+
   },
   "dependencies": {
     "clsx": "^2.1.1",
