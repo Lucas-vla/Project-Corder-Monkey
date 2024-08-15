@@ -4,10 +4,10 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build && firebase deploy",
+    "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "postinstall": "npm install firebase -g"
+    "lint": "next lint"
+    
 
   },
   "dependencies": {
